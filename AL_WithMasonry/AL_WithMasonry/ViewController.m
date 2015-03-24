@@ -38,26 +38,33 @@
     [self.view addSubview:_greenView];
     [self.view addSubview:_blueView];
     
-    [_redView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(@30);
-        make.top.mas_equalTo(@30);
-        make.height.mas_equalTo(_greenView.mas_height);
-        make.width.mas_equalTo(_greenView.mas_width);
-        make.right.mas_equalTo(_greenView.mas_left).with.offset(-30);
-        make.bottom.mas_equalTo(_blueView.mas_top).with.offset(-30);
-    }];
+//    [_redView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(10, 10, 10, 10));
+//    }];
     
-    [_greenView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(@-30);
-        make.top.mas_equalTo(@30);
+    [_redView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(50, 10, 10, 10));
     }];
-    
-    [_blueView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(@30);
-        make.right.mas_equalTo(@-30);
-        make.bottom.mas_equalTo(@-30);
-        make.height.mas_equalTo(_redView.mas_height);
-    }];
+//    [_redView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(@30);
+//        make.top.mas_equalTo(@30);
+//        make.height.mas_equalTo(_greenView.mas_height);
+//        make.width.mas_equalTo(_greenView.mas_width);
+//        make.right.mas_equalTo(_greenView.mas_left).with.offset(-30);
+//        make.bottom.mas_equalTo(_blueView.mas_top).with.offset(-30);
+//    }];
+//    
+//    [_greenView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.mas_equalTo(@-30);
+//        make.top.mas_equalTo(@30);
+//    }];
+//    
+//    [_blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(@30);
+//        make.right.mas_equalTo(@-30);
+//        make.bottom.mas_equalTo(@-30);
+//        make.height.mas_equalTo(_redView.mas_height);
+//    }];
     
 }
 
